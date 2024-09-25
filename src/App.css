@@ -13,7 +13,7 @@ body {
 
 .container {
   background-color: #ffc2a0;
-  height: 100vh;
+  height: 100%;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 150px;
+  padding: 10px;
+  width: 100%;
 }
 
 .heading {
@@ -36,6 +37,7 @@ body {
   font-family: 'Roboto';
   font-size: 35px;
 }
+
 .list-container {
   display: flex;
   flex-direction: column;

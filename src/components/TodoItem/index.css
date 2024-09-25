@@ -3,7 +3,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 10px ;
+  width: 100%;
 }
 
 .button {
@@ -16,7 +17,6 @@
   height: 30px;
   width: 70px;
   margin-right: 20px;
-  
 }
 
 .title {

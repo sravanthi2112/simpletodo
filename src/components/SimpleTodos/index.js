@@ -25,8 +25,13 @@ class SimpleTodos extends Component {
     this.setState({todoDetailsList: filteredTodoData})
   }
 
-  addItem = () => {
+  addItem = event => {
+    event.preventDefault() // Prevents the form from refreshing the page
     const {newTodo, todoDetailsList} = this.state
+    if (newTodo.trim() === '') {
+      return // Prevents adding empty todos
+    }
+
     const numberMatch = newTodo.match(/\d+$/)
     const number = numberMatch ? parseInt(numberMatch[0], 10) : 1
     const baseTitle = newTodo.replace(/\d+$/, '').trim()
@@ -68,7 +73,7 @@ class SimpleTodos extends Component {
               placeholder="Enter todo"
               className="input"
             />
-            <button type="submit"  className="add-button">
+            <button type="submit" className="add-button">
               Add
             </button>
           </form>
